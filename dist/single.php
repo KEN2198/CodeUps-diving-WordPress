@@ -3,7 +3,7 @@
 				<div class="sub-mv__inner">
 					<div class="sub-mv__img">
 						<picture>
-							<source srcset="/assets/images/page-blog-sp.jpg" media="(max-width: 767px)" />
+							<source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/page-blog-sp.jpg" media="(max-width: 767px)" />
 							<img src="<?php echo get_theme_file_uri(); ?>/assets/images/page-blog.jpg" alt="魚が泳いでいる様子" />
 						</picture>
 					</div>

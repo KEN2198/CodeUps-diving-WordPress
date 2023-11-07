@@ -22,6 +22,22 @@ $contact = esc_url( home_url( '/contact/' ) );
 $sitemap = esc_url( home_url( '/sitemap/' ) );
 ?>
 	<body>
+	<div class="loading js-loading u-desktop">
+			<div class="loading__inner">
+				<div class="loading__img-wrap">
+					<div class="loading__img js-loading-img">
+						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/loading-left.jpg" alt="亀の写真" />
+					</div>
+					<div class="loading__img js-loading-img">
+						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/loading-right.jpg" alt="亀の写真" />
+					</div>
+				</div>
+				<div class="loading__title-wrap js-loading-title">
+					<p class="loading__title">diving</p>
+					<p class="loading__subtitle">into&nbsp;the&nbsp;ocean</p>
+				</div>
+			</div>
+		</div>
 		<header class="header top-header">
 			<div class="header__inner">
 				<h1 class="header__logo">

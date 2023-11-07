@@ -13,22 +13,6 @@ $termsofservise = esc_url( home_url( '/terms-of-service/' ) );
 $contact = esc_url( home_url( '/contact/' ) );
 $sitemap = esc_url( home_url( '/sitemap/' ) );
 ?>
-<div class="loading js-loading u-desktop">
-			<div class="loading__inner">
-				<div class="loading__img-wrap">
-					<div class="loading__img js-loading-img">
-						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/loading-left.jpg" alt="亀の写真" />
-					</div>
-					<div class="loading__img js-loading-img">
-						<img src="<?php echo get_theme_file_uri(); ?>/assets/images/loading-right.jpg" alt="亀の写真" />
-					</div>
-				</div>
-				<div class="loading__title-wrap js-loading-title">
-					<p class="loading__title">diving</p>
-					<p class="loading__subtitle">into&nbsp;the&nbsp;ocean</p>
-				</div>
-			</div>
-		</div>
 		<main>
 			<div class="mv">
 				<div class="mv__inner">
@@ -277,8 +261,39 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
 								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/price.jpg" alt="海中の写真" />
 							</picture>
 						</div>
+						<?php
+// カスタムフィールド 'price' からデータを取得
+$price_data = SCF::get('price');
 
-						<ul class="price__lists">
+if (!empty($price_data)) {
+    echo '<ul class="price__lists">';
+
+    foreach ($price_data as $fields) {
+        // タイトルを表示
+        echo '<li class="price__list">';
+        echo '<h3 class="price__list-title">' . $fields['price_diving'] . '</h3>';
+        echo '<dl class="price__list-item">';
+
+        // カスタムフィールドからコース名と価格を動的に表示
+        for ($i = 1; $i <= 4; $i++) { // 数字はカスタムフィールドの数に合わせて調整
+            $course_key = 'price_course' . $i;
+            $price_key = 'price_price' . $i;
+
+            if (!empty($fields[$course_key]) && !empty($fields[$price_key])) {
+                echo '<dt>' . $fields[$course_key] . '</dt>';
+                echo '<dd>' . $fields[$price_key] . '</dd>';
+            }
+        }
+
+        echo '</dl>';
+        echo '</li>';
+    }
+
+    echo '</ul>';
+}
+?>
+
+						<!-- <ul class="price__lists">
 							<li class="price__list">
 								<h3 class="price__list-title">ライセンス講習</h3>
 								<dl class="price__list-item">
@@ -325,7 +340,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
 									<dd>¥32,000</dd>
 								</dl>
 							</li>
-						</ul>
+						</ul> -->
 					</div>
 					<div class="price__button">
 						<a href="<?php echo $price; ?>" class="button"><span>View more</span></a>

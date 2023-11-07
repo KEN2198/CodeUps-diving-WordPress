@@ -28,6 +28,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
 
 $custom_query = new WP_Query($args);
 
+
 if ($custom_query->have_posts()) :
     while ($custom_query->have_posts()) : $custom_query->the_post();
 ?>
@@ -71,7 +72,7 @@ if ($custom_query->have_posts()) :
           <?php endif; ?>
 												</div>
 												<div class="sidebar__review-item__info">
-													<p class="sidebar__review-item__gender">30代(カップル)</p>
+													<p class="sidebar__review-item__gender"><?php the_field('voice_1'); ?></p>
 
 													<h3 class="sidebar__review-item__title"><?php the_title(); ?></h3>
 												</div>
