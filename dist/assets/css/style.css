@@ -4310,7 +4310,7 @@ textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.wpcf7-not
 	}
 
 	.price__inner::before {
-		background-image: url(/assets/images/pc-price-kingyohanadai.png);
+		background-image: url(../../assets/images/pc-price-kingyohanadai.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		bottom: -2.75rem;

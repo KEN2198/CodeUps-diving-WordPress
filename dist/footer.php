@@ -24,7 +24,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
 					<div class="contact__items">
 						<div class="contact__item">
 							<div class="contact__logo">
-								<a href="#"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/contact-logo.png" alt="コンタクトロゴ" /></a>
+								<img src="<?php echo get_theme_file_uri(); ?>/assets/images/contact-logo.png" alt="コンタクトロゴ" />
 							</div>
 							<ul class="contact__access">
 								<li>沖縄県那覇市1-1</li>

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<meta name="format-detection" content="telephone=no" />
-		<link rel="shortcut icon" href="http://codeups-diving-wp.local/wp-content/uploads/2023/10/tab2-1.png">
+		<link rel="shortcut icon" href="http://xs804195.xsrv.jp/wp-test/wp-content/uploads/2023/10/tab2-1.png">
     <?php wp_head(); ?>
 	</head>
 	<?php
